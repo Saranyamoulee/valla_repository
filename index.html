@@ -3,12 +3,68 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Welcome to Valla</title>
+  <title>Valla Product & Services</title>
+  <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
-  <h1>Welcome to valla.in!</h1>
-  <p>For sales queries please contact us through below details
-    mail  - support@valla.in
-    phone - +91 95665 54407</p>
+  <header>
+    <div class="navbar">
+      <img src="logo.png" alt="Valla Logo" class="logo"/>
+      <div class="title-block">
+        <h1>Valla Product & Services</h1>
+        <p>Built for Strength. Crafted for Service.</p>
+      </div>
+      <nav>
+        <a href="#home" class="active">Home</a>
+        <a href="#services">Services</a>
+        <a href="#about">About</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section id="home">
+      <h2>Building Trailers, Shelters & Tipper Bodies with Precision</h2>
+      <p>
+        At Valla Product & Services, we take pride in delivering rugged, reliable, and custom-engineered transportation solutions.
+        Whether you need industrial-grade trailers, durable tipper bodies, or mobile shelters, we design and manufacture products built
+        to last in the most demanding environments. Our focus is on craftsmanship, quality materials, and tailored designs that exceed expectations.
+      </p>
+    </section>
+
+    <section id="services">
+      <h3>Our Services</h3>
+      <ul>
+        <li><strong>Trailer Manufacturing:</strong> Flatbed, semi, and heavy-duty trailers.</li>
+        <li><strong>Tipper Bodies:</strong> Robust tippers for construction and mining.</li>
+        <li><strong>Shelter Fabrication:</strong> Custom-built mobile and static shelters.</li>
+      </ul>
+    </section>
+
+    <section id="about">
+      <h3>About Us</h3>
+      <p>
+        We specialize in high-quality trailer manufacturing, tipper body design, and shelter fabrication with a commitment to durability and client satisfaction.
+      </p>
+    </section>
+
+    <section id="contact">
+      <h3>Get in Touch</h3>
+      <p>Email: support@valla.in</p>
+      <p>Phone: +91-95665 54407</p>
+      <p>Location: Lakshmanapura Village, Thyamagondu Hobli, Bengaluru</p>
+    </section>
+  </main>
+
+  <script>
+    const navLinks = document.querySelectorAll("nav a");
+    navLinks.forEach(link => {
+      link.addEventListener("click", () => {
+        navLinks.forEach(l => l.classList.remove("active"));
+        link.classList.add("active");
+      });
+    });
+  </script>
 </body>
 </html>
